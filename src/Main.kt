@@ -10,7 +10,9 @@ fun main() {
         val article = Article()
         article.kz = partKz
         article.ru = partRu
-        println(article.kz + "=" + article.ru)
+//        println(article.kz + "=" + article.ru)
+        println(article)
+
 
     }
 }
@@ -18,4 +20,26 @@ fun main() {
 class Article {
     var kz: String = ""
     var ru: String = ""
+
+    //article.kz + "=" + article.ru
+    /*1
+    override fun toString(): String {
+        return this.kz + "=" + this.ru
+    }
+    */
+
+    /*2
+    override fun toString(): String {
+        return kz + "=" + ru
+    }
+    */
+
+    /*3
+    override fun toString(): String {
+        return "$kz = $ru"
+    }
+    */
+
+    override fun toString()= "$kz = $ru"
+
 }
