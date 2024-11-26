@@ -5,6 +5,7 @@ fun main() {
     file.forEachLine { line ->
         val parts = line.split("%")
         val partKz = parts[0]
-        println(partKz)
+        val partRu = parts[1]
+        println(partKz + "=" + partRu)
     }
 }
