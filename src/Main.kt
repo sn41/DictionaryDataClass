@@ -7,9 +7,16 @@ fun main() {
         val partKz = parts[0]
         val partRu = parts[1]
 //        println(partKz + "=" + partRu)
+
+        /* 5
         val article = Article()
         article.kz = partKz
         article.ru = partRu
+        */
+
+        //5
+        val article = Article(partKz, partRu)
+
 //        println(article.kz + "=" + article.ru)
         println(article)
 
@@ -18,8 +25,17 @@ fun main() {
 }
 
 class Article {
-    var kz: String = ""
-    var ru: String = ""
+    // 5 var kz: String = ""
+    // 5 var ru: String = ""
+
+    //5
+    val kz: String
+    val ru: String
+    constructor(kz: String, ru: String) {
+        this.kz = kz
+        this.ru = ru
+    }
+
 
     //article.kz + "=" + article.ru
     /*1
@@ -40,6 +56,7 @@ class Article {
     }
     */
 
+    //4
     override fun toString()= "$kz = $ru"
 
 }
