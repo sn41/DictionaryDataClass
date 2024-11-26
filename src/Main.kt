@@ -24,7 +24,11 @@ fun main() {
     }
 }
 
-class Article {
+data class Article(val kz: String, val ru: String){
+    override fun toString()= "$kz = $ru"
+}
+
+class ArticleOld {
     // 5 var kz: String = ""
     // 5 var ru: String = ""
 
@@ -60,3 +64,4 @@ class Article {
     override fun toString()= "$kz = $ru"
 
 }
+
